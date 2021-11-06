@@ -10,12 +10,12 @@
       function BMR_Calc($Gender, $Height, $Weight, $Age) {
         if ($Gender == "M") {
           $BMR = 66.47 + (6.24 * $Weight) + (12.7 * $Height) - (6.755 * $Age);
-          echo "<p>Your BMR is $BMR calories per day</p>";
+          echo "<p>Your BMR is " . htmlspecialchars($BMR) . " calories per day</p>";
           //Add daily calorie needs based on activity level
         }
         elseif ($Gender == "F") {
             $BMR = 655.1 + (4.35 * $Weight) + (4.7 * $Height) - (4.7 * $Age);
-            echo "<p>Your BMR is $BMR calories per day</p>";
+            echo "<p>Your BMR is " . htmlspecialchars($BMR) . " calories per day</p>";
         }
         else {
             echo "<p>Please select a valid value for gender";
